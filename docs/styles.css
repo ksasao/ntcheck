@@ -144,6 +144,11 @@ body.shared-preview .pdf-check {
   pointer-events: none;
 }
 
+body.shared-preview .map-stats {
+  font-size: 1.2rem;
+  padding: 8px 10px;
+}
+
 .pdf-pane,
 .side-pane {
   background: var(--panel);
