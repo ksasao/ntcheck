@@ -12,7 +12,7 @@ const STATS_BOX_HEIGHT = 36;
 const STATS_BOX_X = 21;
 const STATS_BOX_Y_RATIO = 0.58;
 const STATS_BOX_UPWARD_FACTOR = 1.3;
-const STATS_BOX_UPWARD_CHAR = 12;
+const STATS_BOX_UPWARD_CHAR = 16;
 
 const els = {
   sourceStatus: document.getElementById("sourceStatus"),
@@ -37,6 +37,7 @@ const els = {
   rateVisitChecked: document.getElementById("rateVisitChecked"),
   rateExhibitChecked: document.getElementById("rateExhibitChecked"),
   checkStats: document.getElementById("checkStats"),
+  xAccountDisplay: document.getElementById("xAccountDisplay"),
   loading: document.getElementById("loading"),
   pdfStage: document.getElementById("pdfStage"),
   pdfImage: document.getElementById("pdfImage"),
@@ -113,6 +114,17 @@ function base64UrlToBytes(value) {
   if (!value) {
     return new Uint8Array();
   }
+  
+  // Validate token length (max 10KB)
+  if (value.length > 10240) {
+    throw new Error("Token too long");
+  }
+  
+  // Validate base64url characters
+  if (!/^[A-Za-z0-9_-]*$/.test(value)) {
+    throw new Error("Invalid base64url characters");
+  }
+  
   const normalized = value.replace(/-/g, "+").replace(/_/g, "/");
   const padLength = (4 - (normalized.length % 4)) % 4;
   const padded = normalized + "=".repeat(padLength);
@@ -175,6 +187,28 @@ function extractShareTokenFromLocation() {
   return params.get(SHARE_PARAM_NAME) || "";
 }
 
+function isValidXAccount(account) {
+  // X account names: 4-15 characters, alphanumeric, underscore, hyphen only
+  // No leading @ or spaces
+  const cleaned = (account || "").trim().replace(/^@/, "");
+  return cleaned.length >= 4 && cleaned.length <= 15 && /^[a-zA-Z0-9_-]+$/.test(cleaned);
+}
+
+function extractShareAccountFromLocation() {
+  const hash = window.location.hash.startsWith("#") ? window.location.hash.slice(1) : window.location.hash;
+  if (!hash) {
+    return "";
+  }
+  const params = new URLSearchParams(hash);
+  const account = params.get("u") || "";
+  
+  // Validate account before returning
+  if (isValidXAccount(account)) {
+    return account.trim().replace(/^@/, "");
+  }
+  return "";
+}
+
 function applySharedStatusIfExists() {
   if (!state.events.length) {
     return false;
@@ -187,6 +221,16 @@ function applySharedStatusIfExists() {
 
   try {
     state.statusMap = decodeStatusMap(token, state.events);
+    
+    // Restore account name from URL
+    const sharedAccount = extractShareAccountFromLocation();
+    if (sharedAccount) {
+      if (els.xAccount) {
+        els.xAccount.value = sharedAccount;
+      }
+      saveXAccount(sharedAccount);
+    }
+    
     return true;
   } catch {
     return false;
@@ -199,6 +243,12 @@ function buildShareUrl() {
   if (!token) {
     return base;
   }
+  
+  const account = (els.xAccount?.value || "").trim().replace(/^@/, "");
+  if (account && isValidXAccount(account)) {
+    return `${base}#${SHARE_PARAM_NAME}=${token}&u=${encodeURIComponent(account)}`;
+  }
+  
   return `${base}#${SHARE_PARAM_NAME}=${token}`;
 }
 
@@ -338,6 +388,7 @@ function applyFilters() {
   els.countVisible.textContent = String(state.filtered.length);
   els.countTotal.textContent = String(state.events.length);
   renderCheckboxLayer();
+  updateCheckStats();
   renderEventList();
 }
 
@@ -410,6 +461,17 @@ function updateCheckStats() {
   }
   if (els.rateExhibitChecked) {
     els.rateExhibitChecked.textContent = String(stats.exhibitRate);
+  }
+
+  // Update X account display
+  if (els.xAccountDisplay) {
+    const account = (els.xAccount?.value || "").trim().replace(/^@/, "");
+    if (account && isValidXAccount(account)) {
+      els.xAccountDisplay.textContent = `@${account}`;
+      els.xAccountDisplay.hidden = false;
+    } else {
+      els.xAccountDisplay.hidden = true;
+    }
   }
 
   updateStatsOverlayPosition();
@@ -634,9 +696,14 @@ function drawCheckboxOnCanvas(ctx, pos, checked) {
 
 function drawStatsOnCanvas(ctx, width, height) {
   const stats = getCheckStats();
+  const account = (els.xAccount?.value || "").trim().replace(/^@/, "");
   const rect = getStatsBoxRect(width, height);
 
-  drawRoundedRect(ctx, rect.x, rect.y, rect.width, rect.height, 3.6);
+  // Adjust box height if account is displayed and valid
+  const isValidAccount = account && isValidXAccount(account);
+  const boxHeight = isValidAccount ? rect.height + 14 : rect.height;
+
+  drawRoundedRect(ctx, rect.x, rect.y, rect.width, boxHeight, 3.6);
   ctx.fillStyle = "rgba(255, 255, 255, 0.9)";
   ctx.strokeStyle = "rgba(0, 0, 0, 0.2)";
   ctx.lineWidth = 0.8;
@@ -646,8 +713,17 @@ function drawStatsOnCanvas(ctx, width, height) {
   ctx.fillStyle = "#243042";
   ctx.font = 'bold 12px "Noto Sans JP", "Yu Gothic UI", sans-serif';
   ctx.textBaseline = "top";
-  ctx.fillText(`見学 ${stats.visitChecked} (${stats.visitRate}%)`, rect.x + 6, rect.y + 5);
-  ctx.fillText(`出展 ${stats.exhibitChecked} (${stats.exhibitRate}%)`, rect.x + 6, rect.y + 19);
+
+  let yOffset = 5;
+  if (isValidAccount) {
+    ctx.font = 'bold 13px "Noto Sans JP", "Yu Gothic UI", sans-serif';
+    ctx.fillText(`@${account}`, rect.x + 6, rect.y + yOffset);
+    ctx.font = 'bold 12px "Noto Sans JP", "Yu Gothic UI", sans-serif';
+    yOffset += 14;
+  }
+
+  ctx.fillText(`見学 ${stats.visitChecked} (${stats.visitRate}%)`, rect.x + 6, rect.y + yOffset);
+  ctx.fillText(`出展 ${stats.exhibitChecked} (${stats.exhibitRate}%)`, rect.x + 6, rect.y + yOffset + 14);
 }
 
 function exportPng() {
@@ -742,6 +818,7 @@ function attachEvents() {
   });
   els.xAccount.addEventListener("input", () => {
     saveXAccount(els.xAccount.value.trim());
+    updateCheckStats();
     renderEventList();
   });
   els.reloadData.addEventListener("click", () => {
