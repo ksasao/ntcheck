@@ -179,8 +179,6 @@ body.shared-preview .pdf-check {
 
 .pdf-check {
   position: absolute;
-  width: 12px;
-  height: 12px;
   margin: 0;
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.18);

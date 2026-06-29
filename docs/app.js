@@ -304,7 +304,9 @@ function escapeHtml(value) {
 function checkboxStyle(pos) {
   const x = ((pos.x + CHECK_OFFSET_X) / state.meta.pdfWidth) * 100;
   const y = ((pos.y + CHECK_OFFSET_Y) / state.meta.pdfHeight) * 100;
-  return `left:${x}%;top:${y}%;`;
+  const width = (EXPORT_BOX_SIZE / state.meta.pdfWidth) * 100;
+  const height = (EXPORT_BOX_SIZE / state.meta.pdfHeight) * 100;
+  return `left:${x}%;top:${y}%;width:${width}%;height:${height}%;`;
 }
 
 function buildRegionOptions() {
