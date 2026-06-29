@@ -23,7 +23,7 @@
     },
     {
       "name": "NT鯖江2019",
-      "region": "未分類",
+      "region": "北陸",
       "dateText": "2019/10/26,27",
       "dateStart": "2019-10-26",
       "dateEnd": "2019-10-27",
@@ -53,7 +53,7 @@
     },
     {
       "name": "NT鯖江2020",
-      "region": "未分類",
+      "region": "北陸",
       "dateText": "2020/10/03,04",
       "dateStart": "2020-10-03",
       "dateEnd": "2020-10-04",
@@ -83,7 +83,7 @@
     },
     {
       "name": "NT鯖江2021",
-      "region": "未分類",
+      "region": "北陸",
       "dateText": "2021/11/26,27",
       "dateStart": "2021-11-26",
       "dateEnd": "2021-11-27",
@@ -113,7 +113,7 @@
     },
     {
       "name": "NT鯖江2022",
-      "region": "未分類",
+      "region": "北陸",
       "dateText": "2022/11/05,06",
       "dateStart": "2022-11-05",
       "dateEnd": "2022-11-06",
@@ -158,7 +158,7 @@
     },
     {
       "name": "NTふくい2025",
-      "region": "未分類",
+      "region": "北陸",
       "dateText": "2025/09/27,28",
       "dateStart": "2025-09-27",
       "dateEnd": "2025-09-28",
@@ -278,7 +278,7 @@
     },
     {
       "name": "NT富山2021",
-      "region": "未分類",
+      "region": "北陸",
       "dateText": "2021/11/06,07",
       "dateStart": "2021-11-06",
       "dateEnd": "2021-11-07",
@@ -308,7 +308,7 @@
     },
     {
       "name": "NT富山2022",
-      "region": "未分類",
+      "region": "北陸",
       "dateText": "2022/09/17,18",
       "dateStart": "2022-09-17",
       "dateEnd": "2022-09-18",
@@ -353,7 +353,7 @@
     },
     {
       "name": "NT富山2023",
-      "region": "未分類",
+      "region": "北陸",
       "dateText": "2023/09/16,17",
       "dateStart": "2023-09-16",
       "dateEnd": "2023-09-17",
@@ -398,7 +398,7 @@
     },
     {
       "name": "NT富山2024",
-      "region": "未分類",
+      "region": "北陸",
       "dateText": "2024/09/14,15",
       "dateStart": "2024-09-14",
       "dateEnd": "2024-09-15",
@@ -547,7 +547,7 @@
       }
     },
     {
-      "name": "NT能登2016(Maker",
+      "name": "NT能登2016(Maker Fire Camp)",
       "region": "北陸",
       "dateText": "2016/08/13,14",
       "dateStart": "2016-08-13",
@@ -712,7 +712,7 @@
       }
     },
     {
-      "name": "Maker",
+      "name": "Maker Fire in Kaga 2024",
       "region": "北陸",
       "dateText": "2024/09/21,22",
       "dateStart": "2024-09-21",
