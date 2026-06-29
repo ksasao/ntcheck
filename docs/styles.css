@@ -115,10 +115,13 @@ body {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.88);
   color: #243042;
-  font-size: 0.96rem;
+  font-size: clamp(0.7rem, 2.5vw, 1.3rem);
   line-height: 1.35;
   white-space: nowrap;
   pointer-events: none;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .workspace {
@@ -145,8 +148,8 @@ body.shared-preview .pdf-check {
 }
 
 body.shared-preview .map-stats {
-  font-size: 1.2rem;
-  padding: 8px 10px;
+  font-size: clamp(0.75rem, 2.8vw, 1.4rem);
+  padding: 6px 7px;
 }
 
 .pdf-pane,
@@ -406,6 +409,42 @@ body.shared-preview .map-stats {
   }
 }
 
+@media (max-width: 1200px) {
+  body.shared-preview .map-stats {
+    font-size: 1.1rem;
+    padding: 5px 6px;
+  }
+
+  .map-stats {
+    font-size: 0.95rem;
+    padding: 4px 5px;
+  }
+}
+
+@media (max-width: 980px) {
+  body.shared-preview .map-stats {
+    font-size: 0.95rem;
+    padding: 5px 6px;
+  }
+
+  .map-stats {
+    font-size: 0.85rem;
+    padding: 4px 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  body.shared-preview .map-stats {
+    font-size: 0.8rem;
+    padding: 4px 5px;
+  }
+
+  .map-stats {
+    font-size: 0.75rem;
+    padding: 3px 4px;
+  }
+}
+
 @media (max-width: 640px) {
   .app-shell {
     width: min(100% - 16px, 1180px);
@@ -423,5 +462,31 @@ body.shared-preview .map-stats {
   .field input,
   .field select {
     border-radius: 12px;
+  }
+
+  body.shared-preview .map-stats {
+    font-size: 0.7rem;
+    padding: 4px 5px;
+    white-space: nowrap;
+    max-width: 110px;
+  }
+
+  .map-stats {
+    font-size: 0.65rem;
+    padding: 3px 4px;
+    white-space: nowrap;
+    max-width: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  body.shared-preview .map-stats {
+    font-size: 0.6rem;
+    padding: 3px 4px;
+  }
+
+  .map-stats {
+    font-size: 0.55rem;
+    padding: 2px 3px;
   }
 }
