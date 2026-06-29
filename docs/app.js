@@ -72,6 +72,12 @@ function initializeMode() {
   }
 }
 
+function syncModeFromLocation() {
+  const shareTokenFromUrl = extractShareTokenFromLocation();
+  state.shareToken = shareTokenFromUrl || "";
+  state.mode = shareTokenFromUrl ? "shared-preview" : "editable";
+}
+
 function isEditableMode() {
   return state.mode === "editable";
 }
@@ -427,6 +433,9 @@ function updateStatsOverlayPosition() {
 }
 
 function setBulkForFiltered(nextValue) {
+  if (!isEditableMode()) {
+    return;
+  }
   for (const event of state.filtered) {
     const id = eventId(event);
     const current = state.statusMap[id] || { visit: false, exhibit: false };
@@ -498,6 +507,9 @@ function renderEventList() {
 }
 
 function handleEventListChange(event) {
+  if (!isEditableMode()) {
+    return;
+  }
   const target = event.target;
   if (!(target instanceof HTMLInputElement) || target.type !== "checkbox") {
     return;
@@ -516,6 +528,9 @@ function handleEventListChange(event) {
 }
 
 function handleLayerClick(event) {
+  if (!isEditableMode()) {
+    return;
+  }
   const target = event.target;
   if (!(target instanceof HTMLButtonElement) || !target.classList.contains("pdf-check")) {
     return;
@@ -745,17 +760,23 @@ function attachEvents() {
   if (els.startChecking) {
     els.startChecking.addEventListener("click", goToEditableMode);
   }
+  els.checkboxLayer.addEventListener("click", handleLayerClick);
+  els.eventList.addEventListener("change", handleEventListChange);
+  window.addEventListener("hashchange", () => {
+    syncModeFromLocation();
+    if (isEditableMode()) {
+      state.statusMap = loadStatusMap();
+      applyModeUi();
+      renderCheckboxLayer();
+      renderEventList();
+      return;
+    }
 
-  if (isEditableMode()) {
-    els.checkboxLayer.addEventListener("click", handleLayerClick);
-    els.eventList.addEventListener("change", handleEventListChange);
-    window.addEventListener("hashchange", () => {
-      state.shareToken = extractShareTokenFromLocation();
-      if (applySharedStatusAndRefresh()) {
-        setTransientStatus("共有リンクの状態を反映しました");
-      }
-    });
-  }
+    applyModeUi();
+    if (applySharedStatusAndRefresh()) {
+      setTransientStatus("共有リンクの状態を反映しました");
+    }
+  });
 }
 
 applyModeUi();
