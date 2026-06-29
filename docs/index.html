@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NTイベント参加チェック</title>
+    <meta
+      name="description"
+      content="PDFを画像化した下書きの上で、見学・出展のチェックボックスを直接クリックできます。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header class="topbar">
+        <div>
+          <h1>NTイベント参加チェック</h1>
+          <p id="sourceName"><a href="https://wiki.nicotech.jp/nico_tech/?NT%E3%82%A4%E3%83%99%E3%83%B3%E3%83%8820%E5%B9%B4%E5%8F%B2%E5%90%8C%E4%BA%BA%E8%AA%8C" target="_blank" rel="noopener noreferrer">NTイベント20年史同人誌 - PukiWiki</a></p>
+        </div>
+        <div id="sourceStatus" class="pill">読み込み中...</div>
+      </header>
+
+      <section class="toolbar">
+        <label>
+          キーワード
+          <input id="keyword" type="search" placeholder="例: 名古屋, 金沢, 2025" />
+        </label>
+        <label>
+          地域
+          <select id="regionFilter"></select>
+        </label>
+        <button id="reloadData" type="button">再読込</button>
+        <button id="bulkCheckFiltered" type="button">絞り込みを一括チェック</button>
+        <button id="bulkUncheckFiltered" type="button">絞り込みを一括解除</button>
+        <button id="copyShareUrl" type="button">共有URLコピー</button>
+        <button id="exportCsv" type="button">CSV保存</button>
+        <button id="exportPng" type="button">PNG保存</button>
+        <div class="summary"><span id="countVisible">0</span> / <span id="countTotal">0</span> 件</div>
+      </section>
+
+      <section class="workspace">
+        <div class="pdf-pane">
+          <div id="loading" class="loading">データを読み込み中です...</div>
+          <div id="pdfStage" class="pdf-stage" hidden>
+            <img id="pdfImage" alt="PDF下書き画像" />
+            <div id="checkboxLayer" class="checkbox-layer"></div>
+            <div id="checkStats" class="map-stats" aria-live="polite">
+              <div>見学 <span id="countVisitChecked">0</span> (<span id="rateVisitChecked">0</span>%)</div>
+              <div>出展 <span id="countExhibitChecked">0</span> (<span id="rateExhibitChecked">0</span>%)</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="side-pane">
+          <label class="x-account-field">
+            並び順
+            <select id="sortOrder">
+              <option value="date_desc" selected>開催が新しい順</option>
+              <option value="date_asc">開催が古い順</option>
+              <option value="name_asc">イベント名 (A-Z)</option>
+              <option value="name_desc">イベント名 (Z-A)</option>
+              <option value="region_asc">地域名順</option>
+            </select>
+          </label>
+          <label class="x-account-field">
+            Xアカウント名
+            <input id="xAccount" type="text" placeholder="例: nt_tokyo" />
+          </label>
+          <ul id="eventList" class="event-list"></ul>
+        </aside>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

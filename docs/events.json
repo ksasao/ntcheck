@@ -1,0 +1,1900 @@
+{
+  "meta": {
+    "pdf": "NTイベント 開催地一覧-202808NT金沢2026配布版.pdf",
+    "pdfWidth": 595.5,
+    "pdfHeight": 842.25,
+    "backgroundImage": "map.png"
+  },
+  "events": [
+    {
+      "name": "NT金沢2011",
+      "region": "北陸",
+      "dateText": "2011/07/31",
+      "dateStart": "2011-07-31",
+      "dateEnd": "2011-07-31",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 53.49
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 53.49
+      }
+    },
+    {
+      "name": "NT鯖江2019",
+      "region": "未分類",
+      "dateText": "2019/10/26,27",
+      "dateStart": "2019-10-26",
+      "dateEnd": "2019-10-27",
+      "checkVisit": {
+        "x": 200.67,
+        "y": 53.66
+      },
+      "checkExhibit": {
+        "x": 209.07,
+        "y": 53.66
+      }
+    },
+    {
+      "name": "NT金沢2",
+      "region": "北陸",
+      "dateText": "2012/07/22",
+      "dateStart": "2012-07-22",
+      "dateEnd": "2012-07-22",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 64.16
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 64.16
+      }
+    },
+    {
+      "name": "NT鯖江2020",
+      "region": "未分類",
+      "dateText": "2020/10/03,04",
+      "dateStart": "2020-10-03",
+      "dateEnd": "2020-10-04",
+      "checkVisit": {
+        "x": 200.67,
+        "y": 64.33
+      },
+      "checkExhibit": {
+        "x": 209.07,
+        "y": 64.33
+      }
+    },
+    {
+      "name": "NT金沢2013",
+      "region": "北陸",
+      "dateText": "2013/08/03,04",
+      "dateStart": "2013-08-03",
+      "dateEnd": "2013-08-04",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 74.83
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 74.83
+      }
+    },
+    {
+      "name": "NT鯖江2021",
+      "region": "未分類",
+      "dateText": "2021/11/26,27",
+      "dateStart": "2021-11-26",
+      "dateEnd": "2021-11-27",
+      "checkVisit": {
+        "x": 200.67,
+        "y": 75.0
+      },
+      "checkExhibit": {
+        "x": 209.07,
+        "y": 75.0
+      }
+    },
+    {
+      "name": "NT金沢2014",
+      "region": "北陸",
+      "dateText": "2014/07/12,13",
+      "dateStart": "2014-07-12",
+      "dateEnd": "2014-07-13",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 85.5
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 85.5
+      }
+    },
+    {
+      "name": "NT鯖江2022",
+      "region": "未分類",
+      "dateText": "2022/11/05,06",
+      "dateStart": "2022-11-05",
+      "dateEnd": "2022-11-06",
+      "checkVisit": {
+        "x": 200.67,
+        "y": 85.67
+      },
+      "checkExhibit": {
+        "x": 209.07,
+        "y": 85.67
+      }
+    },
+    {
+      "name": "ニコニコ技術部＠札幌勉強会",
+      "region": "北海道",
+      "dateText": "2013/12/13",
+      "dateStart": "2013-12-13",
+      "dateEnd": "2013-12-13",
+      "checkVisit": {
+        "x": 377.87,
+        "y": 82.78
+      },
+      "checkExhibit": {
+        "x": 386.27,
+        "y": 82.78
+      }
+    },
+    {
+      "name": "NT金沢2015",
+      "region": "北陸",
+      "dateText": "2015/07/18,19,20",
+      "dateStart": "2015-07-18",
+      "dateEnd": "2015-07-20",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 96.17
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 96.17
+      }
+    },
+    {
+      "name": "NTふくい2025",
+      "region": "未分類",
+      "dateText": "2025/09/27,28",
+      "dateStart": "2025-09-27",
+      "dateEnd": "2025-09-28",
+      "checkVisit": {
+        "x": 200.67,
+        "y": 96.34
+      },
+      "checkExhibit": {
+        "x": 209.07,
+        "y": 96.34
+      }
+    },
+    {
+      "name": "NT札幌2019",
+      "region": "北海道",
+      "dateText": "2019/12/01",
+      "dateStart": "2019-12-01",
+      "dateEnd": "2019-12-01",
+      "checkVisit": {
+        "x": 377.87,
+        "y": 93.45
+      },
+      "checkExhibit": {
+        "x": 386.27,
+        "y": 93.45
+      }
+    },
+    {
+      "name": "NT金沢2016",
+      "region": "北陸",
+      "dateText": "2016/07/16,17,18",
+      "dateStart": "2016-07-16",
+      "dateEnd": "2016-07-18",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 106.84
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 106.84
+      }
+    },
+    {
+      "name": "NT札幌2020",
+      "region": "北海道",
+      "dateText": "2020/12/26",
+      "dateStart": "2020-12-26",
+      "dateEnd": "2020-12-26",
+      "checkVisit": {
+        "x": 377.87,
+        "y": 104.12
+      },
+      "checkExhibit": {
+        "x": 386.27,
+        "y": 104.12
+      }
+    },
+    {
+      "name": "NT金沢2017",
+      "region": "北陸",
+      "dateText": "2017/07/08,09",
+      "dateStart": "2017-07-08",
+      "dateEnd": "2017-07-09",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 117.51
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 117.51
+      }
+    },
+    {
+      "name": "NT函館2024",
+      "region": "北海道",
+      "dateText": "2024/04/29",
+      "dateStart": "2024-04-29",
+      "dateEnd": "2024-04-29",
+      "checkVisit": {
+        "x": 377.87,
+        "y": 114.78
+      },
+      "checkExhibit": {
+        "x": 386.27,
+        "y": 114.78
+      }
+    },
+    {
+      "name": "NT札幌mini2024",
+      "region": "北海道",
+      "dateText": "2024/09/14,15",
+      "dateStart": "2024-09-14",
+      "dateEnd": "2024-09-15",
+      "checkVisit": {
+        "x": 377.87,
+        "y": 125.45
+      },
+      "checkExhibit": {
+        "x": 386.27,
+        "y": 125.45
+      }
+    },
+    {
+      "name": "NT金沢2018",
+      "region": "北陸",
+      "dateText": "2018/07/07,08",
+      "dateStart": "2018-07-07",
+      "dateEnd": "2018-07-08",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 128.18
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 128.18
+      }
+    },
+    {
+      "name": "NT富山2021",
+      "region": "未分類",
+      "dateText": "2021/11/06,07",
+      "dateStart": "2021-11-06",
+      "dateEnd": "2021-11-07",
+      "checkVisit": {
+        "x": 200.67,
+        "y": 128.75
+      },
+      "checkExhibit": {
+        "x": 209.07,
+        "y": 128.75
+      }
+    },
+    {
+      "name": "NT金沢2019",
+      "region": "北陸",
+      "dateText": "2019/06/29,30",
+      "dateStart": "2019-06-29",
+      "dateEnd": "2019-06-30",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 138.85
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 138.85
+      }
+    },
+    {
+      "name": "NT富山2022",
+      "region": "未分類",
+      "dateText": "2022/09/17,18",
+      "dateStart": "2022-09-17",
+      "dateEnd": "2022-09-18",
+      "checkVisit": {
+        "x": 200.67,
+        "y": 139.03
+      },
+      "checkExhibit": {
+        "x": 209.07,
+        "y": 139.03
+      }
+    },
+    {
+      "name": "NT函館2025",
+      "region": "北海道",
+      "dateText": "2025/05/05",
+      "dateStart": "2025-05-05",
+      "dateEnd": "2025-05-05",
+      "checkVisit": {
+        "x": 377.87,
+        "y": 136.11
+      },
+      "checkExhibit": {
+        "x": 386.27,
+        "y": 136.11
+      }
+    },
+    {
+      "name": "NT金沢mini@まるびぃ",
+      "region": "北陸",
+      "dateText": "2020/09/12",
+      "dateStart": "2020-09-12",
+      "dateEnd": "2020-09-12",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 149.52
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 149.52
+      }
+    },
+    {
+      "name": "NT富山2023",
+      "region": "未分類",
+      "dateText": "2023/09/16,17",
+      "dateStart": "2023-09-16",
+      "dateEnd": "2023-09-17",
+      "checkVisit": {
+        "x": 200.67,
+        "y": 149.7
+      },
+      "checkExhibit": {
+        "x": 209.07,
+        "y": 149.7
+      }
+    },
+    {
+      "name": "NT函館mini2026",
+      "region": "北海道",
+      "dateText": "2026/05/04",
+      "dateStart": "2026-05-04",
+      "dateEnd": "2026-05-04",
+      "checkVisit": {
+        "x": 377.87,
+        "y": 146.78
+      },
+      "checkExhibit": {
+        "x": 386.27,
+        "y": 146.78
+      }
+    },
+    {
+      "name": "NT金沢2021",
+      "region": "北陸",
+      "dateText": "2021/06/26,27",
+      "dateStart": "2021-06-26",
+      "dateEnd": "2021-06-27",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 160.19
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 160.19
+      }
+    },
+    {
+      "name": "NT富山2024",
+      "region": "未分類",
+      "dateText": "2024/09/14,15",
+      "dateStart": "2024-09-14",
+      "dateEnd": "2024-09-15",
+      "checkVisit": {
+        "x": 200.67,
+        "y": 160.37
+      },
+      "checkExhibit": {
+        "x": 209.07,
+        "y": 160.37
+      }
+    },
+    {
+      "name": "NT金沢2022",
+      "region": "北陸",
+      "dateText": "2022/06/18,19",
+      "dateStart": "2022-06-18",
+      "dateEnd": "2022-06-19",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 170.86
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 170.86
+      }
+    },
+    {
+      "name": "NT金沢mini@石川県立図書館",
+      "region": "北陸",
+      "dateText": "2022/08/20",
+      "dateStart": "2022-08-20",
+      "dateEnd": "2022-08-20",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 181.53
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 181.53
+      }
+    },
+    {
+      "name": "NT金沢2023",
+      "region": "北陸",
+      "dateText": "2023/06/17,18",
+      "dateStart": "2023-06-17",
+      "dateEnd": "2023-06-18",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 192.2
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 192.2
+      }
+    },
+    {
+      "name": "NT金沢2024",
+      "region": "北陸",
+      "dateText": "2024/06/22,23",
+      "dateStart": "2024-06-22",
+      "dateEnd": "2024-06-23",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 202.88
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 202.88
+      }
+    },
+    {
+      "name": "NTいわて2025",
+      "region": "東北",
+      "dateText": "2025/11/30",
+      "dateStart": "2025-11-30",
+      "dateEnd": "2025-11-30",
+      "checkVisit": {
+        "x": 430.43,
+        "y": 206.01
+      },
+      "checkExhibit": {
+        "x": 438.83,
+        "y": 206.01
+      }
+    },
+    {
+      "name": "NT金沢2025",
+      "region": "北陸",
+      "dateText": "2025/06/21,22",
+      "dateStart": "2025-06-21",
+      "dateEnd": "2025-06-22",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 213.55
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 213.55
+      }
+    },
+    {
+      "name": "NT福島2026",
+      "region": "東北",
+      "dateText": "2026/03/28",
+      "dateStart": "2026-03-28",
+      "dateEnd": "2026-03-28",
+      "checkVisit": {
+        "x": 430.43,
+        "y": 216.67
+      },
+      "checkExhibit": {
+        "x": 438.83,
+        "y": 216.67
+      }
+    },
+    {
+      "name": "NT金沢2026",
+      "region": "北陸",
+      "dateText": "2026/06/27,28",
+      "dateStart": "2026-06-27",
+      "dateEnd": "2026-06-28",
+      "checkVisit": {
+        "x": 26.69,
+        "y": 224.22
+      },
+      "checkExhibit": {
+        "x": 35.09,
+        "y": 224.22
+      }
+    },
+    {
+      "name": "NT分散(仮称)",
+      "region": "その他",
+      "dateText": "2021/03/21",
+      "dateStart": "2021-03-21",
+      "dateEnd": "2021-03-21",
+      "checkVisit": {
+        "x": 266.89,
+        "y": 220.84
+      },
+      "checkExhibit": {
+        "x": 275.29,
+        "y": 220.84
+      }
+    },
+    {
+      "name": "NT能登2016(Maker",
+      "region": "北陸",
+      "dateText": "2016/08/13,14",
+      "dateStart": "2016-08-13",
+      "dateEnd": "2016-08-14",
+      "checkVisit": {
+        "x": 28.42,
+        "y": 257.28
+      },
+      "checkExhibit": {
+        "x": 36.82,
+        "y": 257.28
+      }
+    },
+    {
+      "name": "NT加賀2017",
+      "region": "北陸",
+      "dateText": "2017/12/16,17",
+      "dateStart": "2017-12-16",
+      "dateEnd": "2017-12-17",
+      "checkVisit": {
+        "x": 28.42,
+        "y": 267.95
+      },
+      "checkExhibit": {
+        "x": 36.82,
+        "y": 267.95
+      }
+    },
+    {
+      "name": "NT加賀2018",
+      "region": "北陸",
+      "dateText": "2018/12/15,16",
+      "dateStart": "2018-12-15",
+      "dateEnd": "2018-12-16",
+      "checkVisit": {
+        "x": 28.42,
+        "y": 278.63
+      },
+      "checkExhibit": {
+        "x": 36.82,
+        "y": 278.63
+      }
+    },
+    {
+      "name": "NT加賀2019",
+      "region": "北陸",
+      "dateText": "2019/12/14",
+      "dateStart": "2019-12-14",
+      "dateEnd": "2019-12-14",
+      "checkVisit": {
+        "x": 28.42,
+        "y": 289.3
+      },
+      "checkExhibit": {
+        "x": 36.82,
+        "y": 289.3
+      }
+    },
+    {
+      "name": "ATM(あの楽器東京)",
+      "region": "関東",
+      "dateText": "2009/02/01",
+      "dateStart": "2009-02-01",
+      "dateEnd": "2009-02-01",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 289.75
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 289.75
+      }
+    },
+    {
+      "name": "NT加賀2020",
+      "region": "北陸",
+      "dateText": "2020/12/12,13",
+      "dateStart": "2020-12-12",
+      "dateEnd": "2020-12-13",
+      "checkVisit": {
+        "x": 28.42,
+        "y": 299.97
+      },
+      "checkExhibit": {
+        "x": 36.82,
+        "y": 299.97
+      }
+    },
+    {
+      "name": "NT川崎",
+      "region": "関東",
+      "dateText": "2009/08/13",
+      "dateStart": "2009-08-13",
+      "dateEnd": "2009-08-13",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 300.42
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 300.42
+      }
+    },
+    {
+      "name": "NT加賀2022(新春)",
+      "region": "北陸",
+      "dateText": "2022/01/15,16",
+      "dateStart": "2022-01-15",
+      "dateEnd": "2022-01-16",
+      "checkVisit": {
+        "x": 28.42,
+        "y": 310.64
+      },
+      "checkExhibit": {
+        "x": 36.82,
+        "y": 310.64
+      }
+    },
+    {
+      "name": "空フェス",
+      "region": "関東",
+      "dateText": "2010/03/06",
+      "dateStart": "2010-03-06",
+      "dateEnd": "2010-03-06",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 311.08
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 311.08
+      }
+    },
+    {
+      "name": "NT加賀2023",
+      "region": "北陸",
+      "dateText": "2023/02/04,05",
+      "dateStart": "2023-02-04",
+      "dateEnd": "2023-02-05",
+      "checkVisit": {
+        "x": 28.42,
+        "y": 321.31
+      },
+      "checkExhibit": {
+        "x": 36.82,
+        "y": 321.31
+      }
+    },
+    {
+      "name": "NT川崎",
+      "region": "関東",
+      "dateText": "2010/07/18",
+      "dateStart": "2010-07-18",
+      "dateEnd": "2010-07-18",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 321.75
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 321.75
+      }
+    },
+    {
+      "name": "Maker",
+      "region": "北陸",
+      "dateText": "2024/09/21,22",
+      "dateStart": "2024-09-21",
+      "dateEnd": "2024-09-22",
+      "checkVisit": {
+        "x": 28.42,
+        "y": 331.98
+      },
+      "checkExhibit": {
+        "x": 36.82,
+        "y": 331.98
+      }
+    },
+    {
+      "name": "Maker Villa Tokyo",
+      "region": "関東",
+      "dateText": "2014/11/25,26,27",
+      "dateStart": "2014-11-25",
+      "dateEnd": "2014-11-27",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 332.42
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 332.42
+      }
+    },
+    {
+      "name": "NT加賀2025",
+      "region": "北陸",
+      "dateText": "2025/02/23,24",
+      "dateStart": "2025-02-23",
+      "dateEnd": "2025-02-24",
+      "checkVisit": {
+        "x": 28.42,
+        "y": 342.65
+      },
+      "checkExhibit": {
+        "x": 36.82,
+        "y": 342.65
+      }
+    },
+    {
+      "name": "NT東京2015",
+      "region": "関東",
+      "dateText": "2015/07/25,26",
+      "dateStart": "2015-07-25",
+      "dateEnd": "2015-07-26",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 343.08
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 343.08
+      }
+    },
+    {
+      "name": "NT加賀2026",
+      "region": "北陸",
+      "dateText": "2026/02/21,22",
+      "dateStart": "2026-02-21",
+      "dateEnd": "2026-02-22",
+      "checkVisit": {
+        "x": 28.42,
+        "y": 353.32
+      },
+      "checkExhibit": {
+        "x": 36.82,
+        "y": 353.32
+      }
+    },
+    {
+      "name": "NT東京2016",
+      "region": "関東",
+      "dateText": "2016/08/07",
+      "dateStart": "2016-08-07",
+      "dateEnd": "2016-08-07",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 353.75
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 353.75
+      }
+    },
+    {
+      "name": "NT東京2017",
+      "region": "関東",
+      "dateText": "2017/08/05",
+      "dateStart": "2017-08-05",
+      "dateEnd": "2017-08-05",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 364.41
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 364.41
+      }
+    },
+    {
+      "name": "AkiParty/NT東京2018",
+      "region": "関東",
+      "dateText": "2018/08/04",
+      "dateStart": "2018-08-04",
+      "dateEnd": "2018-08-04",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 375.08
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 375.08
+      }
+    },
+    {
+      "name": "AkiParty2019",
+      "region": "関東",
+      "dateText": "2019/08/10",
+      "dateStart": "2019-08-10",
+      "dateEnd": "2019-08-10",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 385.75
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 385.75
+      }
+    },
+    {
+      "name": "NT東京2023",
+      "region": "関東",
+      "dateText": "2023/11/04,05",
+      "dateStart": "2023-11-04",
+      "dateEnd": "2023-11-05",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 396.41
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 396.41
+      }
+    },
+    {
+      "name": "NT東京2024",
+      "region": "関東",
+      "dateText": "2024/09/07,08",
+      "dateStart": "2024-09-07",
+      "dateEnd": "2024-09-08",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 407.08
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 407.08
+      }
+    },
+    {
+      "name": "miniNT新宿2025",
+      "region": "関東",
+      "dateText": "2025/02/01",
+      "dateStart": "2025-02-01",
+      "dateEnd": "2025-02-01",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 417.74
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 417.74
+      }
+    },
+    {
+      "name": "NT広島2019",
+      "region": "中国",
+      "dateText": "2019/02/02",
+      "dateStart": "2019-02-02",
+      "dateEnd": "2019-02-02",
+      "checkVisit": {
+        "x": 136.74,
+        "y": 422.59
+      },
+      "checkExhibit": {
+        "x": 145.14,
+        "y": 422.59
+      }
+    },
+    {
+      "name": "NT松戸2025",
+      "region": "関東",
+      "dateText": "2025/03/09",
+      "dateStart": "2025-03-09",
+      "dateEnd": "2025-03-09",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 428.41
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 428.41
+      }
+    },
+    {
+      "name": "NT広島2026",
+      "region": "中国",
+      "dateText": "2026/03/01",
+      "dateStart": "2026-03-01",
+      "dateEnd": "2026-03-01",
+      "checkVisit": {
+        "x": 136.74,
+        "y": 433.26
+      },
+      "checkExhibit": {
+        "x": 145.14,
+        "y": 433.26
+      }
+    },
+    {
+      "name": "NT東京2025",
+      "region": "関東",
+      "dateText": "2025/09/06,07",
+      "dateStart": "2025-09-06",
+      "dateEnd": "2025-09-07",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 439.08
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 439.08
+      }
+    },
+    {
+      "name": "NT湘南2025",
+      "region": "関東",
+      "dateText": "2025/11/08",
+      "dateStart": "2025-11-08",
+      "dateEnd": "2025-11-08",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 449.74
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 449.74
+      }
+    },
+    {
+      "name": "NT松戸2026",
+      "region": "関東",
+      "dateText": "2026/03/07",
+      "dateStart": "2026-03-07",
+      "dateEnd": "2026-03-07",
+      "checkVisit": {
+        "x": 408.0,
+        "y": 460.41
+      },
+      "checkExhibit": {
+        "x": 416.4,
+        "y": 460.41
+      }
+    },
+    {
+      "name": "NT台北",
+      "region": "海外",
+      "dateText": "2015/05/30,31",
+      "dateStart": "2015-05-30",
+      "dateEnd": "2015-05-31",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 494.95
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 494.95
+      }
+    },
+    {
+      "name": "NT深圳",
+      "region": "海外",
+      "dateText": "2015/06/19,20,21",
+      "dateStart": "2015-06-19",
+      "dateEnd": "2015-06-21",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 505.62
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 505.62
+      }
+    },
+    {
+      "name": "NTシンガポール",
+      "region": "海外",
+      "dateText": "2015/07/11,12",
+      "dateStart": "2015-07-11",
+      "dateEnd": "2015-07-12",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 516.29
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 516.29
+      }
+    },
+    {
+      "name": "NT台北2016",
+      "region": "海外",
+      "dateText": "2016/05/07,08",
+      "dateStart": "2016-05-07",
+      "dateEnd": "2016-05-08",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 526.95
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 526.95
+      }
+    },
+    {
+      "name": "N2M(名古屋2008)",
+      "region": "東海",
+      "dateText": "2008/10/12",
+      "dateStart": "2008-10-12",
+      "dateEnd": "2008-10-12",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 524.1
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 524.1
+      }
+    },
+    {
+      "name": "NTシンガポール2016",
+      "region": "海外",
+      "dateText": "2016/06/25,26",
+      "dateStart": "2016-06-25",
+      "dateEnd": "2016-06-26",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 537.62
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 537.62
+      }
+    },
+    {
+      "name": "ANO(あの楽器名古屋)",
+      "region": "東海",
+      "dateText": "2009/01/11",
+      "dateStart": "2009-01-11",
+      "dateEnd": "2009-01-11",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 534.76
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 534.76
+      }
+    },
+    {
+      "name": "NTSingapore2017",
+      "region": "海外",
+      "dateText": "2017/07/22,23",
+      "dateStart": "2017-07-22",
+      "dateEnd": "2017-07-23",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 548.28
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 548.28
+      }
+    },
+    {
+      "name": "ANO3(あの楽器浜松)",
+      "region": "東海",
+      "dateText": "2009/04/12",
+      "dateStart": "2009-04-12",
+      "dateEnd": "2009-04-12",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 545.43
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 545.43
+      }
+    },
+    {
+      "name": "NTTaipei2017",
+      "region": "海外",
+      "dateText": "2017/11/03,05",
+      "dateStart": "2017-11-03",
+      "dateEnd": "2017-11-05",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 558.95
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 558.95
+      }
+    },
+    {
+      "name": "NT名古屋2",
+      "region": "東海",
+      "dateText": "2009/10/11",
+      "dateStart": "2009-10-11",
+      "dateEnd": "2009-10-11",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 556.1
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 556.1
+      }
+    },
+    {
+      "name": "NTSingapore2018",
+      "region": "海外",
+      "dateText": "2018/08/17,18,19",
+      "dateStart": "2018-08-17",
+      "dateEnd": "2018-08-19",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 569.62
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 569.62
+      }
+    },
+    {
+      "name": "NT名古屋3",
+      "region": "東海",
+      "dateText": "2010/10/23",
+      "dateStart": "2010-10-23",
+      "dateEnd": "2010-10-23",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 566.76
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 566.76
+      }
+    },
+    {
+      "name": "NTtaipei2018",
+      "region": "海外",
+      "dateText": "2018/11/02,03,04",
+      "dateStart": "2018-11-02",
+      "dateEnd": "2018-11-04",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 579.89
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 579.89
+      }
+    },
+    {
+      "name": "NT名古屋4",
+      "region": "東海",
+      "dateText": "2011/11/20",
+      "dateStart": "2011-11-20",
+      "dateEnd": "2011-11-20",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 577.43
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 577.43
+      }
+    },
+    {
+      "name": "NTTaipei2019",
+      "region": "海外",
+      "dateText": "2019/10/26,27",
+      "dateStart": "2019-10-26",
+      "dateEnd": "2019-10-27",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 590.95
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 590.95
+      }
+    },
+    {
+      "name": "NTM(高槻2008)",
+      "region": "関西",
+      "dateText": "2008/08/30",
+      "dateStart": "2008-08-30",
+      "dateEnd": "2008-08-30",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 591.63
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 591.63
+      }
+    },
+    {
+      "name": "NT名古屋5",
+      "region": "東海",
+      "dateText": "2012/10/13",
+      "dateStart": "2012-10-13",
+      "dateEnd": "2012-10-13",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 588.09
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 588.09
+      }
+    },
+    {
+      "name": "NTShenzhen2023",
+      "region": "海外",
+      "dateText": "2023/11/11,12",
+      "dateStart": "2023-11-11",
+      "dateEnd": "2023-11-12",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 601.62
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 601.62
+      }
+    },
+    {
+      "name": "NKM(京都2009)",
+      "region": "関西",
+      "dateText": "2009/03/21",
+      "dateStart": "2009-03-21",
+      "dateEnd": "2009-03-21",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 602.3
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 602.3
+      }
+    },
+    {
+      "name": "NT名古屋6",
+      "region": "東海",
+      "dateText": "2013/11/16",
+      "dateStart": "2013-11-16",
+      "dateEnd": "2013-11-16",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 598.76
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 598.76
+      }
+    },
+    {
+      "name": "NTTaipei2023",
+      "region": "海外",
+      "dateText": "2023/11/18,19",
+      "dateStart": "2023-11-18",
+      "dateEnd": "2023-11-19",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 612.28
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 612.28
+      }
+    },
+    {
+      "name": "NT 京都201003",
+      "region": "関西",
+      "dateText": "2010/03/27",
+      "dateStart": "2010-03-27",
+      "dateEnd": "2010-03-27",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 612.97
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 612.97
+      }
+    },
+    {
+      "name": "NT名古屋2014",
+      "region": "東海",
+      "dateText": "2014/10/19",
+      "dateStart": "2014-10-19",
+      "dateEnd": "2014-10-19",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 609.43
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 609.43
+      }
+    },
+    {
+      "name": "NTShenzhen2024",
+      "region": "海外",
+      "dateText": "2024/11/16,17",
+      "dateStart": "2024-11-16",
+      "dateEnd": "2024-11-17",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 622.95
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 622.95
+      }
+    },
+    {
+      "name": "NT京都2011",
+      "region": "関西",
+      "dateText": "2011/03/27",
+      "dateStart": "2011-03-27",
+      "dateEnd": "2011-03-27",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 623.63
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 623.63
+      }
+    },
+    {
+      "name": "NT名古屋2015",
+      "region": "東海",
+      "dateText": "2015/10/10",
+      "dateStart": "2015-10-10",
+      "dateEnd": "2015-10-10",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 620.09
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 620.09
+      }
+    },
+    {
+      "name": "NTTaipei2024",
+      "region": "海外",
+      "dateText": "2024/11/30,12/01",
+      "dateStart": "2024-11-30",
+      "dateEnd": "2024-12-01",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 633.61
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 633.61
+      }
+    },
+    {
+      "name": "NT京都2012",
+      "region": "関西",
+      "dateText": "2012/03/25",
+      "dateStart": "2012-03-25",
+      "dateEnd": "2012-03-25",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 634.3
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 634.3
+      }
+    },
+    {
+      "name": "NT名古屋2016",
+      "region": "東海",
+      "dateText": "2016/10/09",
+      "dateStart": "2016-10-09",
+      "dateEnd": "2016-10-09",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 630.76
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 630.76
+      }
+    },
+    {
+      "name": "NTMumbai2025",
+      "region": "海外",
+      "dateText": "2025/02/20,22",
+      "dateStart": "2025-02-20",
+      "dateEnd": "2025-02-22",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 644.28
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 644.28
+      }
+    },
+    {
+      "name": "NT京都2013",
+      "region": "関西",
+      "dateText": "2013/03/24",
+      "dateStart": "2013-03-24",
+      "dateEnd": "2013-03-24",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 644.96
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 644.96
+      }
+    },
+    {
+      "name": "NT名古屋2017",
+      "region": "東海",
+      "dateText": "2017/09/17",
+      "dateStart": "2017-09-17",
+      "dateEnd": "2017-09-17",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 641.42
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 641.42
+      }
+    },
+    {
+      "name": "NTShenzhen2025",
+      "region": "海外",
+      "dateText": "2025/11/14,15",
+      "dateStart": "2025-11-14",
+      "dateEnd": "2025-11-15",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 654.95
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 654.95
+      }
+    },
+    {
+      "name": "NT京都2014",
+      "region": "関西",
+      "dateText": "2014/03/22",
+      "dateStart": "2014-03-22",
+      "dateEnd": "2014-03-22",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 655.63
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 655.63
+      }
+    },
+    {
+      "name": "NT名古屋2018",
+      "region": "東海",
+      "dateText": "2018/10/06,07",
+      "dateStart": "2018-10-06",
+      "dateEnd": "2018-10-07",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 652.09
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 652.09
+      }
+    },
+    {
+      "name": "NTTaipei2025",
+      "region": "海外",
+      "dateText": "2025/11/29,30",
+      "dateStart": "2025-11-29",
+      "dateEnd": "2025-11-30",
+      "checkVisit": {
+        "x": 22.66,
+        "y": 665.61
+      },
+      "checkExhibit": {
+        "x": 31.06,
+        "y": 665.61
+      }
+    },
+    {
+      "name": "NT京都2015",
+      "region": "関西",
+      "dateText": "2015/03/22",
+      "dateStart": "2015-03-22",
+      "dateEnd": "2015-03-22",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 666.3
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 666.3
+      }
+    },
+    {
+      "name": "NT名古屋2019",
+      "region": "東海",
+      "dateText": "2019/09/21,22,23",
+      "dateStart": "2019-09-21",
+      "dateEnd": "2019-09-23",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 662.76
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 662.76
+      }
+    },
+    {
+      "name": "NT京都2016",
+      "region": "関西",
+      "dateText": "2016/03/20",
+      "dateStart": "2016-03-20",
+      "dateEnd": "2016-03-20",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 676.96
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 676.96
+      }
+    },
+    {
+      "name": "NT名古屋2020",
+      "region": "東海",
+      "dateText": "2020/10/25",
+      "dateStart": "2020-10-25",
+      "dateEnd": "2020-10-25",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 673.42
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 673.42
+      }
+    },
+    {
+      "name": "NT京都2017",
+      "region": "関西",
+      "dateText": "2017/03/19",
+      "dateStart": "2017-03-19",
+      "dateEnd": "2017-03-19",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 687.63
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 687.63
+      }
+    },
+    {
+      "name": "NT名古屋2023",
+      "region": "東海",
+      "dateText": "2023/11/18,19",
+      "dateStart": "2023-11-18",
+      "dateEnd": "2023-11-19",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 684.09
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 684.09
+      }
+    },
+    {
+      "name": "NT京都2018",
+      "region": "関西",
+      "dateText": "2018/03/25",
+      "dateStart": "2018-03-25",
+      "dateEnd": "2018-03-25",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 698.29
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 698.29
+      }
+    },
+    {
+      "name": "NT名古屋2024",
+      "region": "東海",
+      "dateText": "2024/11/09,10",
+      "dateStart": "2024-11-09",
+      "dateEnd": "2024-11-10",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 694.75
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 694.75
+      }
+    },
+    {
+      "name": "NT京都2019",
+      "region": "関西",
+      "dateText": "2019/03/24",
+      "dateStart": "2019-03-24",
+      "dateEnd": "2019-03-24",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 708.96
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 708.96
+      }
+    },
+    {
+      "name": "NT名古屋2025",
+      "region": "東海",
+      "dateText": "2025/10/18,19",
+      "dateStart": "2025-10-18",
+      "dateEnd": "2025-10-19",
+      "checkVisit": {
+        "x": 401.59,
+        "y": 705.42
+      },
+      "checkExhibit": {
+        "x": 409.99,
+        "y": 705.42
+      }
+    },
+    {
+      "name": "NT人機",
+      "region": "関西",
+      "dateText": "2019/03/25",
+      "dateStart": "2019-03-25",
+      "dateEnd": "2019-03-25",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 719.63
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 719.63
+      }
+    },
+    {
+      "name": "NFM",
+      "region": "九州",
+      "dateText": "2009/06/06",
+      "dateStart": "2009-06-06",
+      "dateEnd": "2009-06-06",
+      "checkVisit": {
+        "x": 40.62,
+        "y": 729.91
+      },
+      "checkExhibit": {
+        "x": 49.02,
+        "y": 729.91
+      }
+    },
+    {
+      "name": "NT京都2020",
+      "region": "関西",
+      "dateText": "2020/03/21",
+      "dateStart": "2020-03-21",
+      "dateEnd": "2020-03-21",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 730.29
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 730.29
+      }
+    },
+    {
+      "name": "NFM1.5",
+      "region": "九州",
+      "dateText": "2010/12/25",
+      "dateStart": "2010-12-25",
+      "dateEnd": "2010-12-25",
+      "checkVisit": {
+        "x": 40.62,
+        "y": 740.58
+      },
+      "checkExhibit": {
+        "x": 49.02,
+        "y": 740.58
+      }
+    },
+    {
+      "name": "NT高の原2023",
+      "region": "関西",
+      "dateText": "2023/03/26",
+      "dateStart": "2023-03-26",
+      "dateEnd": "2023-03-26",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 740.96
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 740.96
+      }
+    },
+    {
+      "name": "NT福岡２",
+      "region": "九州",
+      "dateText": "2011/12/24",
+      "dateStart": "2011-12-24",
+      "dateEnd": "2011-12-24",
+      "checkVisit": {
+        "x": 40.62,
+        "y": 751.25
+      },
+      "checkExhibit": {
+        "x": 49.02,
+        "y": 751.25
+      }
+    },
+    {
+      "name": "NT山城2023",
+      "region": "関西",
+      "dateText": "2023/12/16",
+      "dateStart": "2023-12-16",
+      "dateEnd": "2023-12-16",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 751.62
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 751.62
+      }
+    },
+    {
+      "name": "NT福岡3",
+      "region": "九州",
+      "dateText": "2012/11/23",
+      "dateStart": "2012-11-23",
+      "dateEnd": "2012-11-23",
+      "checkVisit": {
+        "x": 40.62,
+        "y": 761.91
+      },
+      "checkExhibit": {
+        "x": 49.02,
+        "y": 761.91
+      }
+    },
+    {
+      "name": "NT京都2024",
+      "region": "関西",
+      "dateText": "2024/03/24",
+      "dateStart": "2024-03-24",
+      "dateEnd": "2024-03-24",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 762.29
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 762.29
+      }
+    },
+    {
+      "name": "NT九州2016勉強会",
+      "region": "九州",
+      "dateText": "2016/06/11",
+      "dateStart": "2016-06-11",
+      "dateEnd": "2016-06-11",
+      "checkVisit": {
+        "x": 40.62,
+        "y": 772.58
+      },
+      "checkExhibit": {
+        "x": 49.02,
+        "y": 772.58
+      }
+    },
+    {
+      "name": "NT京都2025",
+      "region": "関西",
+      "dateText": "2025/03/23",
+      "dateStart": "2025-03-23",
+      "dateEnd": "2025-03-23",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 772.96
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 772.96
+      }
+    },
+    {
+      "name": "NT九州2016",
+      "region": "九州",
+      "dateText": "2016/10/15,16",
+      "dateStart": "2016-10-15",
+      "dateEnd": "2016-10-16",
+      "checkVisit": {
+        "x": 40.62,
+        "y": 783.24
+      },
+      "checkExhibit": {
+        "x": 49.02,
+        "y": 783.24
+      }
+    },
+    {
+      "name": "NT京都2026",
+      "region": "関西",
+      "dateText": "2026/03/21",
+      "dateStart": "2026-03-21",
+      "dateEnd": "2026-03-21",
+      "checkVisit": {
+        "x": 228.04,
+        "y": 783.62
+      },
+      "checkExhibit": {
+        "x": 236.44,
+        "y": 783.62
+      }
+    },
+    {
+      "name": "NT熊本2019",
+      "region": "九州",
+      "dateText": "2019/04/27,28",
+      "dateStart": "2019-04-27",
+      "dateEnd": "2019-04-28",
+      "checkVisit": {
+        "x": 40.62,
+        "y": 793.91
+      },
+      "checkExhibit": {
+        "x": 49.02,
+        "y": 793.91
+      }
+    }
+  ]
+}
