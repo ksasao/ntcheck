@@ -17,6 +17,8 @@ const STATS_BOX_UPWARD_CHAR = 12;
 const els = {
   sourceStatus: document.getElementById("sourceStatus"),
   sourceName: document.getElementById("sourceName"),
+  toolbar: document.querySelector(".toolbar"),
+  sidePane: document.querySelector(".side-pane"),
   keyword: document.getElementById("keyword"),
   regionFilter: document.getElementById("regionFilter"),
   sortOrder: document.getElementById("sortOrder"),
@@ -25,6 +27,7 @@ const els = {
   bulkCheckFiltered: document.getElementById("bulkCheckFiltered"),
   bulkUncheckFiltered: document.getElementById("bulkUncheckFiltered"),
   copyShareUrl: document.getElementById("copyShareUrl"),
+  startChecking: document.getElementById("startChecking"),
   exportCsv: document.getElementById("exportCsv"),
   exportPng: document.getElementById("exportPng"),
   countVisible: document.getElementById("countVisible"),
@@ -52,8 +55,26 @@ const state = {
   events: [],
   filtered: [],
   sortOrder: "date_desc",
-  statusMap: loadStatusMap(),
+  statusMap: {},
+  mode: "editable",
+  shareToken: "",
 };
+
+initializeMode();
+
+function initializeMode() {
+  const shareTokenFromUrl = extractShareTokenFromLocation();
+  state.shareToken = shareTokenFromUrl || "";
+  state.mode = shareTokenFromUrl ? "shared-preview" : "editable";
+
+  if (state.mode === "editable") {
+    state.statusMap = loadStatusMap();
+  }
+}
+
+function isEditableMode() {
+  return state.mode === "editable";
+}
 
 function loadStatusMap() {
   try {
@@ -65,6 +86,9 @@ function loadStatusMap() {
 }
 
 function saveStatusMap() {
+  if (!isEditableMode()) {
+    return;
+  }
   localStorage.setItem(STATUS_KEY, JSON.stringify(state.statusMap));
 }
 
@@ -145,61 +169,20 @@ function extractShareTokenFromLocation() {
   return params.get(SHARE_PARAM_NAME) || "";
 }
 
-function cleanShareTokenFromLocation() {
-  const url = new URL(window.location.href);
-  let changed = false;
-
-  if (url.searchParams.has(SHARE_PARAM_NAME)) {
-    url.searchParams.delete(SHARE_PARAM_NAME);
-    changed = true;
-  }
-
-  const hash = url.hash.startsWith("#") ? url.hash.slice(1) : url.hash;
-  if (!hash) {
-    if (changed) {
-      const nextUrl = `${url.pathname}${url.search}${url.hash}`;
-      history.replaceState(null, "", nextUrl);
-    }
-    return;
-  }
-
-  const params = new URLSearchParams(hash);
-  if (!params.has(SHARE_PARAM_NAME)) {
-    if (changed) {
-      const nextUrl = `${url.pathname}${url.search}${url.hash}`;
-      history.replaceState(null, "", nextUrl);
-    }
-    return;
-  }
-
-  params.delete(SHARE_PARAM_NAME);
-  const nextHash = params.toString();
-  url.hash = nextHash ? `#${nextHash}` : "";
-  changed = true;
-
-  if (changed) {
-    const nextUrl = `${url.pathname}${url.search}${url.hash}`;
-    history.replaceState(null, "", nextUrl);
-  }
-}
-
 function applySharedStatusIfExists() {
   if (!state.events.length) {
     return false;
   }
 
-  const token = extractShareTokenFromLocation();
+  const token = state.shareToken;
   if (!token) {
     return false;
   }
 
   try {
     state.statusMap = decodeStatusMap(token, state.events);
-    saveStatusMap();
-    cleanShareTokenFromLocation();
     return true;
   } catch {
-    cleanShareTokenFromLocation();
     return false;
   }
 }
@@ -221,6 +204,31 @@ function applySharedStatusAndRefresh() {
   renderCheckboxLayer();
   renderEventList();
   return true;
+}
+
+function getUrlWithoutArgs() {
+  const url = new URL(window.location.href);
+  return `${url.origin}${url.pathname}`;
+}
+
+function goToEditableMode() {
+  window.location.assign(getUrlWithoutArgs());
+}
+
+function applyModeUi() {
+  const sharedPreview = state.mode === "shared-preview";
+  document.body.classList.toggle("shared-preview", sharedPreview);
+
+  if (els.toolbar) {
+    els.toolbar.hidden = sharedPreview;
+  }
+  if (els.sidePane) {
+    els.sidePane.hidden = sharedPreview;
+  }
+
+  if (els.startChecking) {
+    els.startChecking.hidden = !sharedPreview;
+  }
 }
 
 function setTransientStatus(text) {
@@ -688,8 +696,11 @@ async function loadData() {
   state.events = state.events.filter((event) => event.checkVisit && event.checkExhibit);
 
   const restoredFromShare = applySharedStatusIfExists();
-
-  els.sourceStatus.textContent = restoredFromShare ? "共有リンクの状態を復元しました" : "読み込み完了";
+  if (state.mode === "shared-preview") {
+    els.sourceStatus.textContent = restoredFromShare ? "共有URL表示モード" : "共有URLの復元に失敗しました";
+  } else {
+    els.sourceStatus.textContent = restoredFromShare ? "共有リンクの状態を読み込みました" : "読み込み完了";
+  }
 
   if (state.meta.backgroundImage) {
     els.pdfImage.src = `./${state.meta.backgroundImage}`;
@@ -731,15 +742,23 @@ function attachEvents() {
   });
   els.exportCsv.addEventListener("click", exportCsv);
   els.exportPng.addEventListener("click", exportPng);
-  els.checkboxLayer.addEventListener("click", handleLayerClick);
-  els.eventList.addEventListener("change", handleEventListChange);
-  window.addEventListener("hashchange", () => {
-    if (applySharedStatusAndRefresh()) {
-      setTransientStatus("共有リンクの状態を反映しました");
-    }
-  });
+  if (els.startChecking) {
+    els.startChecking.addEventListener("click", goToEditableMode);
+  }
+
+  if (isEditableMode()) {
+    els.checkboxLayer.addEventListener("click", handleLayerClick);
+    els.eventList.addEventListener("change", handleEventListChange);
+    window.addEventListener("hashchange", () => {
+      state.shareToken = extractShareTokenFromLocation();
+      if (applySharedStatusAndRefresh()) {
+        setTransientStatus("共有リンクの状態を反映しました");
+      }
+    });
+  }
 }
 
+applyModeUi();
 attachEvents();
 loadData().catch((error) => {
   els.sourceStatus.textContent = "読み込み失敗";

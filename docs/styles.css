@@ -29,6 +29,24 @@ body {
   gap: 16px;
 }
 
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.start-checking {
+  height: 38px;
+  border: 1px solid #0d8a4b;
+  border-radius: 999px;
+  padding: 0 16px;
+  background: #16a85c;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .topbar h1 {
   margin: 0;
   font-size: 1.6rem;
@@ -108,6 +126,22 @@ body {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
   gap: 12px;
+}
+
+body.shared-preview .toolbar {
+  display: none;
+}
+
+body.shared-preview .workspace {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+body.shared-preview .side-pane {
+  display: none;
+}
+
+body.shared-preview .pdf-check {
+  pointer-events: none;
 }
 
 .pdf-pane,
