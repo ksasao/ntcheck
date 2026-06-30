@@ -211,6 +211,16 @@ function extractShareAccountFromLocation() {
 }
 
 function applySharedStatusIfExists() {
+  // Always update account from URL, regardless of state.events
+  // Clear or set account based on URL parameter
+  if (state.mode === "shared-preview") {
+    const sharedAccount = extractShareAccountFromLocation();
+    if (els.xAccount) {
+      els.xAccount.value = sharedAccount;
+    }
+  }
+
+  // Now handle status map (requires state.events)
   if (!state.events.length) {
     return false;
   }
@@ -222,21 +232,6 @@ function applySharedStatusIfExists() {
 
   try {
     state.statusMap = decodeStatusMap(token, state.events);
-    
-    // Restore account name from URL only if explicitly provided
-    // Do NOT save to localStorage when restoring from URL
-    const sharedAccount = extractShareAccountFromLocation();
-    if (sharedAccount) {
-      if (els.xAccount) {
-        els.xAccount.value = sharedAccount;
-      }
-    } else {
-      // URL has token but no account - do not show account name
-      if (els.xAccount) {
-        els.xAccount.value = "";
-      }
-    }
-    
     return true;
   } catch {
     return false;
@@ -295,6 +290,16 @@ function applyModeUi() {
 
   if (els.startChecking) {
     els.startChecking.hidden = !sharedPreview;
+  }
+
+  // Hide account name in shared-preview mode
+  if (els.xAccountDisplay) {
+    if (sharedPreview) {
+      els.xAccountDisplay.hidden = true;
+    } else {
+      // In edit mode, re-check if account should be displayed
+      updateCheckStats();
+    }
   }
 }
 
@@ -487,6 +492,8 @@ function updateCheckStats() {
         els.xAccountDisplay.classList.remove("xAccountDisplay-small");
       }
     } else {
+      // Explicitly clear text content when account is invalid
+      els.xAccountDisplay.textContent = "";
       els.xAccountDisplay.hidden = true;
     }
   }
@@ -832,10 +839,12 @@ async function loadData() {
 
 function attachEvents() {
   if (els.xAccount) {
-    // Only restore from localStorage if not from shared URL
-    const urlAccount = extractShareAccountFromLocation();
-    if (!urlAccount) {
-      els.xAccount.value = loadXAccount();
+    // Only restore from localStorage in edit mode, not in shared-preview
+    if (state.mode !== "shared-preview") {
+      const urlAccount = extractShareAccountFromLocation();
+      if (!urlAccount) {
+        els.xAccount.value = loadXAccount();
+      }
     }
   }
   state.sortOrder = els.sortOrder?.value || "date_desc";
@@ -881,9 +890,26 @@ function attachEvents() {
     }
 
     applyModeUi();
-    if (applySharedStatusAndRefresh()) {
-      setTransientStatus("共有リンクの状態を反映しました");
+    // Update account from URL BEFORE rendering
+    applySharedStatusIfExists();
+    updateCheckStats();
+    // Then render the rest
+    renderCheckboxLayer();
+    renderEventList();
+    
+    // In shared-preview mode, force synchronize account display
+    if (state.mode === "shared-preview") {
+      const sharedAccount = extractShareAccountFromLocation();
+      if (els.xAccount) {
+        els.xAccount.value = sharedAccount; // Clear if not valid
+      }
+      updateCheckStats(); // Update display
+      if (els.xAccountDisplay) {
+        els.xAccountDisplay.hidden = true; // Always hide in shared mode
+      }
     }
+    
+    setTransientStatus("共有リンクの状態を反映しました");
   });
 
   // Update display after loading account from localStorage
