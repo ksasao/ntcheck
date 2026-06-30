@@ -65,22 +65,22 @@ export function drawCheckboxOnCanvas(ctx, pos, checked, scale = 1) {
   if (checked) {
     ctx.fillStyle = "#16a85c";
     ctx.strokeStyle = "#0d8a4b";
-    ctx.lineWidth = 0.6 / Math.max(1, scale);  // スケール時に太さを調整
+    ctx.lineWidth = 0.5 / Math.max(1, scale);
     ctx.fill();
     ctx.stroke();
 
     ctx.strokeStyle = "#ffffff";
-    ctx.lineWidth = 0.8 / Math.max(1, scale);  // スケール時に太さを調整
+    ctx.lineWidth = 0.6 / Math.max(1, scale);
     ctx.beginPath();
-    // チェック✔の位置を調整
-    ctx.moveTo(x + size * 0.25, y + size * 0.52);
-    ctx.lineTo(x + size * 0.42, y + size * 0.68);
-    ctx.lineTo(x + size * 0.75, y + size * 0.28);
+    // チェック✔の位置と大きさを調整
+    ctx.moveTo(x + size * 0.22, y + size * 0.50);
+    ctx.lineTo(x + size * 0.38, y + size * 0.64);
+    ctx.lineTo(x + size * 0.72, y + size * 0.32);
     ctx.stroke();
   } else {
     ctx.fillStyle = "rgba(255, 255, 255, 0.35)";
     ctx.strokeStyle = "rgba(0, 0, 0, 0.18)";
-    ctx.lineWidth = 0.6 / Math.max(1, scale);  // スケール時に太さを調整
+    ctx.lineWidth = 0.5 / Math.max(1, scale);
     ctx.fill();
     ctx.stroke();
   }

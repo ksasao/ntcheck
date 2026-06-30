@@ -91,8 +91,8 @@ export function updateStatsOverlayPosition() {
 
   // Position account display above the stats box
   if (els.xAccountDisplay && !els.xAccountDisplay.hidden) {
-    // Account label appears above the box, offset 0.5 lines higher
-    const accountLabelTop = (rect.y - 15) / state.meta.pdfHeight * 100;
+    // Account label appears well above the box to avoid overlap
+    const accountLabelTop = (rect.y - 25) / state.meta.pdfHeight * 100;
     // Shift right by half character width
     const charWidthOffset = (state.meta.pdfWidth * 0.015) / 2;
     els.xAccountDisplay.style.left = `${((rect.x + charWidthOffset) / state.meta.pdfWidth) * 100}%`;
