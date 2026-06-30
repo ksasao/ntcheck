@@ -274,6 +274,11 @@ function getUrlWithoutArgs() {
 }
 
 function goToEditableMode() {
+  // Restore saved account from localStorage when going back to editable mode
+  const savedAccount = loadXAccount();
+  if (savedAccount && els.xAccount) {
+    els.xAccount.value = savedAccount;
+  }
   window.location.assign(getUrlWithoutArgs());
 }
 
