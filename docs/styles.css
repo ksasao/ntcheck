@@ -212,10 +212,14 @@ body.shared-preview .map-stats {
   margin: 0;
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.18);
-  border-radius: 2px;
+  border-radius: 3px;
   background: rgba(255, 255, 255, 0.35);
   cursor: pointer;
   transform: translate(0, 0);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pdf-check.hidden {
@@ -229,14 +233,13 @@ body.shared-preview .map-stats {
 
 .pdf-check.checked::after {
   content: "";
-  position: absolute;
-  left: 3px;
-  top: 1px;
-  width: 3px;
-  height: 7px;
+  position: static;
+  width: 35%;
+  height: 60%;
   border: solid #fff;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+  border-radius: 0;
 }
 
 .side-pane {

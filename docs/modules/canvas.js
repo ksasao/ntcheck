@@ -50,32 +50,37 @@ export function drawRoundedRect(ctx, x, y, w, h, r) {
  * @param {CanvasRenderingContext2D} ctx - キャンバスコンテキスト
  * @param {Object} pos - {x, y} 位置
  * @param {boolean} checked - チェック状態
+ * @param {number} scale - スケーリング係数
  */
-export function drawCheckboxOnCanvas(ctx, pos, checked) {
+export function drawCheckboxOnCanvas(ctx, pos, checked, scale = 1) {
   const x = pos.x + CHECK_OFFSET_X;
   const y = pos.y + CHECK_OFFSET_Y;
   const size = EXPORT_BOX_SIZE;
-  const radius = Math.max(0.8, size * 0.14);
+  
+  // スケール時に角丸が小さくなりすぎないように調整
+  const baseRadius = 0.6;
+  const radius = Math.max(baseRadius, size * 0.12);
 
   drawRoundedRect(ctx, x, y, size, size, radius);
   if (checked) {
     ctx.fillStyle = "#16a85c";
     ctx.strokeStyle = "#0d8a4b";
-    ctx.lineWidth = 0.8;
+    ctx.lineWidth = 0.6 / Math.max(1, scale);  // スケール時に太さを調整
     ctx.fill();
     ctx.stroke();
 
     ctx.strokeStyle = "#ffffff";
-    ctx.lineWidth = 1.2;
+    ctx.lineWidth = 0.8 / Math.max(1, scale);  // スケール時に太さを調整
     ctx.beginPath();
-    ctx.moveTo(x + size * 0.26, y + size * 0.56);
-    ctx.lineTo(x + size * 0.45, y + size * 0.74);
-    ctx.lineTo(x + size * 0.8, y + size * 0.3);
+    // チェック✔の位置を調整
+    ctx.moveTo(x + size * 0.25, y + size * 0.52);
+    ctx.lineTo(x + size * 0.42, y + size * 0.68);
+    ctx.lineTo(x + size * 0.75, y + size * 0.28);
     ctx.stroke();
   } else {
     ctx.fillStyle = "rgba(255, 255, 255, 0.35)";
     ctx.strokeStyle = "rgba(0, 0, 0, 0.18)";
-    ctx.lineWidth = 0.8;
+    ctx.lineWidth = 0.6 / Math.max(1, scale);  // スケール時に太さを調整
     ctx.fill();
     ctx.stroke();
   }

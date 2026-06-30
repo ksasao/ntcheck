@@ -55,6 +55,7 @@ export function exportPng(getCheckStats) {
   const exportScale = Math.min(X_MAX_IMAGE_SIDE / width, X_MAX_IMAGE_SIDE / height);
   const outputWidth = Math.max(1, Math.round(width * exportScale));
   const outputHeight = Math.max(1, Math.round(height * exportScale));
+  
   const canvas = document.createElement("canvas");
   canvas.width = outputWidth;
   canvas.height = outputHeight;
@@ -65,17 +66,19 @@ export function exportPng(getCheckStats) {
     return;
   }
 
+  // High DPI対応: スケーリングを正確に適用
   ctx.scale(exportScale, exportScale);
   ctx.drawImage(els.pdfImage, 0, 0, width, height);
 
+  // チェックボックス描画時にスケール値を渡さない（contextのscaleで十分）
   for (const event of state.events) {
     if (!event.checkVisit || !event.checkExhibit) {
       continue;
     }
 
     const status = getStatus(event);
-    drawCheckboxOnCanvas(ctx, event.checkVisit, status.visit);
-    drawCheckboxOnCanvas(ctx, event.checkExhibit, status.exhibit);
+    drawCheckboxOnCanvas(ctx, event.checkVisit, status.visit, 1);
+    drawCheckboxOnCanvas(ctx, event.checkExhibit, status.exhibit, 1);
   }
 
   drawStatsOnCanvas(ctx, width, height, getCheckStats);
