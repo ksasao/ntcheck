@@ -127,6 +127,24 @@ body {
   gap: 0;
 }
 
+#xAccountDisplay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  color: #243042;
+  pointer-events: none;
+  overflow: visible;
+  display: inline-block;
+}
+
+#xAccountDisplay.xAccountDisplay-small {
+  font-size: 0.75rem;
+}
+
 .workspace {
   margin-top: 12px;
   display: grid;

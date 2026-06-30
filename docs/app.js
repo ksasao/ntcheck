@@ -188,10 +188,11 @@ function extractShareTokenFromLocation() {
 }
 
 function isValidXAccount(account) {
-  // X account names: 4-15 characters, alphanumeric, underscore, hyphen only
-  // No leading @ or spaces
+  // X account names (official spec): 4-15 characters
+  // Allowed: alphanumeric (A-Z, 0-9) and underscore (_) only
+  // No dashes, spaces, or other symbols
   const cleaned = (account || "").trim().replace(/^@/, "");
-  return cleaned.length >= 4 && cleaned.length <= 15 && /^[a-zA-Z0-9_-]+$/.test(cleaned);
+  return cleaned.length >= 4 && cleaned.length <= 15 && /^[a-zA-Z0-9_]+$/.test(cleaned);
 }
 
 function extractShareAccountFromLocation() {
@@ -222,13 +223,18 @@ function applySharedStatusIfExists() {
   try {
     state.statusMap = decodeStatusMap(token, state.events);
     
-    // Restore account name from URL
+    // Restore account name from URL only if explicitly provided
+    // Do NOT save to localStorage when restoring from URL
     const sharedAccount = extractShareAccountFromLocation();
     if (sharedAccount) {
       if (els.xAccount) {
         els.xAccount.value = sharedAccount;
       }
-      saveXAccount(sharedAccount);
+    } else {
+      // URL has token but no account - do not show account name
+      if (els.xAccount) {
+        els.xAccount.value = "";
+      }
     }
     
     return true;
@@ -469,6 +475,12 @@ function updateCheckStats() {
     if (account && isValidXAccount(account)) {
       els.xAccountDisplay.textContent = `@${account}`;
       els.xAccountDisplay.hidden = false;
+      // Apply small font class if account name is 9 characters or longer
+      if (account.length >= 9) {
+        els.xAccountDisplay.classList.add("xAccountDisplay-small");
+      } else {
+        els.xAccountDisplay.classList.remove("xAccountDisplay-small");
+      }
     } else {
       els.xAccountDisplay.hidden = true;
     }
@@ -494,6 +506,16 @@ function updateStatsOverlayPosition() {
   els.checkStats.style.left = `${(rect.x / state.meta.pdfWidth) * 100}%`;
   els.checkStats.style.top = `${(rect.y / state.meta.pdfHeight) * 100}%`;
   els.checkStats.style.width = `${(rect.width / state.meta.pdfWidth) * 100}%`;
+
+  // Position account display above the stats box
+  if (els.xAccountDisplay && !els.xAccountDisplay.hidden) {
+    // Account label appears above the box, offset 0.5 lines higher
+    const accountLabelTop = (rect.y - 15) / state.meta.pdfHeight * 100;
+    // Shift right by half character width
+    const charWidthOffset = (state.meta.pdfWidth * 0.015) / 2;
+    els.xAccountDisplay.style.left = `${((rect.x + charWidthOffset) / state.meta.pdfWidth) * 100}%`;
+    els.xAccountDisplay.style.top = `${accountLabelTop}%`;
+  }
 }
 
 function setBulkForFiltered(nextValue) {
@@ -699,11 +721,8 @@ function drawStatsOnCanvas(ctx, width, height) {
   const account = (els.xAccount?.value || "").trim().replace(/^@/, "");
   const rect = getStatsBoxRect(width, height);
 
-  // Adjust box height if account is displayed and valid
-  const isValidAccount = account && isValidXAccount(account);
-  const boxHeight = isValidAccount ? rect.height + 14 : rect.height;
-
-  drawRoundedRect(ctx, rect.x, rect.y, rect.width, boxHeight, 3.6);
+  // Draw the stats box (without account inside)
+  drawRoundedRect(ctx, rect.x, rect.y, rect.width, rect.height, 3.6);
   ctx.fillStyle = "rgba(255, 255, 255, 0.9)";
   ctx.strokeStyle = "rgba(0, 0, 0, 0.2)";
   ctx.lineWidth = 0.8;
@@ -714,16 +733,17 @@ function drawStatsOnCanvas(ctx, width, height) {
   ctx.font = 'bold 12px "Noto Sans JP", "Yu Gothic UI", sans-serif';
   ctx.textBaseline = "top";
 
-  let yOffset = 5;
-  if (isValidAccount) {
-    ctx.font = 'bold 13px "Noto Sans JP", "Yu Gothic UI", sans-serif';
-    ctx.fillText(`@${account}`, rect.x + 6, rect.y + yOffset);
-    ctx.font = 'bold 12px "Noto Sans JP", "Yu Gothic UI", sans-serif';
-    yOffset += 14;
-  }
+  // Draw stats
+  ctx.fillText(`見学 ${stats.visitChecked} (${stats.visitRate}%)`, rect.x + 6, rect.y + 5);
+  ctx.fillText(`出展 ${stats.exhibitChecked} (${stats.exhibitRate}%)`, rect.x + 6, rect.y + 19);
 
-  ctx.fillText(`見学 ${stats.visitChecked} (${stats.visitRate}%)`, rect.x + 6, rect.y + yOffset);
-  ctx.fillText(`出展 ${stats.exhibitChecked} (${stats.exhibitRate}%)`, rect.x + 6, rect.y + yOffset + 14);
+  // Draw account name above the box (if valid)
+  const isValidAccount = account && isValidXAccount(account);
+  if (isValidAccount) {
+    const accountFontSize = account.length >= 9 ? 11 : 13;
+    ctx.font = `bold ${accountFontSize}px "Noto Sans JP", "Yu Gothic UI", sans-serif`;
+    ctx.fillText(`@${account}`, rect.x, rect.y - 18);
+  }
 }
 
 function exportPng() {
@@ -807,7 +827,11 @@ async function loadData() {
 
 function attachEvents() {
   if (els.xAccount) {
-    els.xAccount.value = loadXAccount();
+    // Only restore from localStorage if not from shared URL
+    const urlAccount = extractShareAccountFromLocation();
+    if (!urlAccount) {
+      els.xAccount.value = loadXAccount();
+    }
   }
   state.sortOrder = els.sortOrder?.value || "date_desc";
   els.keyword.addEventListener("input", applyFilters);
@@ -856,6 +880,9 @@ function attachEvents() {
       setTransientStatus("共有リンクの状態を反映しました");
     }
   });
+
+  // Update display after loading account from localStorage
+  updateCheckStats();
 }
 
 applyModeUi();

@@ -47,8 +47,8 @@
           <div id="pdfStage" class="pdf-stage" hidden>
             <img id="pdfImage" alt="PDF下書き画像" />
             <div id="checkboxLayer" class="checkbox-layer"></div>
+            <div id="xAccountDisplay" class="x-account-display" hidden></div>
             <div id="checkStats" class="map-stats" aria-live="polite">
-              <div id="xAccountDisplay" hidden style="font-weight: 600; font-size: 0.9em; margin-bottom: 1px;"></div>
               <div style="display: flex; flex-direction: column; gap: 1px;">
                 <div>見学 <span id="countVisitChecked">0</span> (<span id="rateVisitChecked">0</span>%)</div>
                 <div>出展 <span id="countExhibitChecked">0</span> (<span id="rateExhibitChecked">0</span>%)</div>
@@ -70,7 +70,7 @@
           </label>
           <label class="x-account-field">
             Xアカウント名
-            <input id="xAccount" type="text" placeholder="アカウント名でイベント中のXを検索できます" title="アカウント名でイベント中のXを検索できます" />
+            <input id="xAccount" type="text" placeholder="アカウント名でイベント中のXを検索できます" title="アカウント名でイベント中のXを検索できます" maxlength="15" />
           </label>
           <ul id="eventList" class="event-list"></ul>
         </aside>
