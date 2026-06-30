@@ -222,13 +222,20 @@ function applySharedStatusIfExists() {
   try {
     state.statusMap = decodeStatusMap(token, state.events);
     
-    // Restore account name from URL
+    // Restore account name from URL only if explicitly provided
+    // Do NOT save to localStorage when restoring from URL
     const sharedAccount = extractShareAccountFromLocation();
     if (sharedAccount) {
       if (els.xAccount) {
         els.xAccount.value = sharedAccount;
       }
-      saveXAccount(sharedAccount);
+    } else {
+      // If s= is set but u= is not provided, do NOT show any account name
+      // This ensures shared URLs without explicit account names don't display
+      // the user's saved account name in the overlay
+      if (els.xAccount) {
+        els.xAccount.value = "";
+      }
     }
     
     return true;
@@ -268,6 +275,11 @@ function getUrlWithoutArgs() {
 }
 
 function goToEditableMode() {
+  // Restore saved account from localStorage when going back to editable mode
+  const savedAccount = loadXAccount();
+  if (savedAccount && els.xAccount) {
+    els.xAccount.value = savedAccount;
+  }
   window.location.assign(getUrlWithoutArgs());
 }
 
@@ -806,8 +818,14 @@ async function loadData() {
 }
 
 function attachEvents() {
+  // Only restore from localStorage if not from shared URL
   if (els.xAccount) {
-    els.xAccount.value = loadXAccount();
+    const urlAccount = extractShareAccountFromLocation();
+    if (!urlAccount) {
+      // No URL account parameter, restore from localStorage
+      els.xAccount.value = loadXAccount();
+    }
+    // If urlAccount exists, keep the value set by applySharedStatusIfExists()
   }
   state.sortOrder = els.sortOrder?.value || "date_desc";
   els.keyword.addEventListener("input", applyFilters);

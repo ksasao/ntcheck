@@ -450,6 +450,15 @@ body.shared-preview .map-stats {
 }
 
 @media (max-width: 768px) {
+  .toolbar {
+    grid-template-columns: minmax(150px, 1fr) 120px repeat(6, auto) minmax(100px, auto);
+  }
+
+  .toolbar button {
+    font-size: 0.85rem;
+    padding: 0 8px;
+  }
+
   body.shared-preview .map-stats {
     font-size: 0.75rem;
     padding: 3px 4px;
@@ -468,6 +477,22 @@ body.shared-preview .map-stats {
 }
 
 @media (max-width: 640px) {
+  .toolbar {
+    grid-template-columns: minmax(130px, 1fr) 100px repeat(6, auto) minmax(90px, auto);
+  }
+
+  .toolbar button {
+    font-size: 0.8rem;
+    padding: 0 6px;
+    height: 36px;
+  }
+
+  .toolbar input,
+  .toolbar select {
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
   .app-shell {
     width: min(100% - 16px, 1180px);
     padding-top: 12px;
@@ -504,6 +529,22 @@ body.shared-preview .map-stats {
 }
 
 @media (max-width: 480px) {
+  .toolbar {
+    grid-template-columns: minmax(120px, 1fr) 90px repeat(6, auto) minmax(80px, auto);
+  }
+
+  .toolbar button {
+    font-size: 0.75rem;
+    padding: 0 5px;
+    height: 34px;
+  }
+
+  .toolbar input,
+  .toolbar select {
+    height: 34px;
+    font-size: 0.85rem;
+  }
+
   body.shared-preview .map-stats {
     font-size: 0.55rem;
     padding: 2px 3px;
@@ -518,6 +559,5 @@ body.shared-preview .map-stats {
     line-height: 1.05;
     max-width: 110px;
     max-height: 80px;
-  }
   }
 }
