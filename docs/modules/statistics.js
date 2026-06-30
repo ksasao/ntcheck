@@ -92,7 +92,10 @@ export function updateStatsOverlayPosition() {
   // Position account display above the stats box
   if (els.xAccountDisplay && !els.xAccountDisplay.hidden) {
     // Account label appears well above the box to avoid overlap
-    const accountLabelTop = (rect.y - 25) / state.meta.pdfHeight * 100;
+    // Offset varies by screen size: mobile needs more spacing, PC needs less
+    const isSmallScreen = window.innerWidth < 768;
+    const offsetPx = isSmallScreen ? 25 : 18;
+    const accountLabelTop = (rect.y - offsetPx) / state.meta.pdfHeight * 100;
     // Shift right by half character width
     const charWidthOffset = (state.meta.pdfWidth * 0.015) / 2;
     els.xAccountDisplay.style.left = `${((rect.x + charWidthOffset) / state.meta.pdfWidth) * 100}%`;

@@ -145,6 +145,16 @@ body {
   font-size: clamp(0.5rem, 1vw, 0.6rem);
 }
 
+@media (min-width: 768px) {
+  #xAccountDisplay {
+    font-size: 1.02rem;
+  }
+
+  #xAccountDisplay.xAccountDisplay-small {
+    font-size: 0.9rem;
+  }
+}
+
 .workspace {
   margin-top: 12px;
   display: grid;
